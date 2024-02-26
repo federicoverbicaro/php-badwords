@@ -1,7 +1,9 @@
 <?php
-$paragrafo = $_GET["paragrafo"];
-$parola = $_GET["parola"];
-$parola_censurata = str_replace($parola, "***", $paragrafo);
+if (isset($_GET["paragrafo"]) && isset($_GET["parola_censura"])) {
+    $paragrafo = $_GET["paragrafo"];
+    $parola_censura = $_GET["parola_censura"];
+    $parola_censurata = str_ireplace($parola_censura, '***', $paragrafo); 
+}
 ?>
 
 
@@ -22,23 +24,24 @@ $parola_censurata = str_replace($parola, "***", $paragrafo);
         <h1 class="text-capitalize ">la prima pagina in php!</h1>
 
         <div class="mt-3">
-            <p class="text-capitalize fs-3  ">questo è il tuo paragrafo:
-                <div>
 
-                <?php echo $paragrafo ?></p>
-                </div>
-                 
+            <div>
+                <p class="text-capitalize fs-3  ">questo è il tuo paragrafo:
+                    <?php echo $paragrafo ?>
+                </p>
+            </div>
+
         </div>
 
 
         <div>
-            <p class="text-capitalize fs-3  ">questo è la tua parola censurata:
-            <div>
 
-            <?php echo $parola_censurata?>
+            <div>
+                <p class="text-capitalize fs-3  ">questo è la tua parola censurata:
+                    <?php echo $parola_censurata ?>
             </div>
 
-               
+
             </p>
 
         </div>

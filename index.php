@@ -11,20 +11,20 @@
 <body>
     <div class="container d-flex justify-content-center vh-100  ">
 
-        <form action="ParolaCens.php" method="$_GET" class="mb-3 d-flex justify-content-center align-items-center  flex-column w-100 mt-5   ">
+        <form action="ParolaCens.php" method="get" class="mb-3 d-flex justify-content-center align-items-center  flex-column w-100 mt-5   ">
 
             <div class="col-6 mt-3 d-flex flex-column  ">
                 <label for="paragrafo" class="form-label">Paragrafo:</label>
                 <div>
 
-                    <textarea name="paragrafo" id="" cols="73" rows="8"></textarea>
+                    <textarea name="paragrafo" id="paragrafo" cols="73" rows="8"></textarea>
                 </div>
             </div>
 
             <div class="col-6 mt-3">
-                <label for="" class="form-label">Parola</label>
+                <label for="parola_censura" class="form-label">Parola</label>
 
-                <input type="text" class="form-control col-5 " name="parola" id="" aria-describedby="emailHelpId" placeholder="Inserisci una parola..." />
+                <input type="text" class="form-control col-5 " name="parola_censura" id="parola_censura" aria-describedby="emailHelpId" placeholder="Inserisci una parola..." />
             </div>
 
             <button type="submit" class="btn btn-primary col-2 mt-3">Invia </button>
