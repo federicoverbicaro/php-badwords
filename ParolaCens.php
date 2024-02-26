@@ -1,7 +1,7 @@
 <?php
 $paragrafo = $_GET["paragrafo"];
 $parola = $_GET["parola"];
-$parola_censurata = str_replace($parola, "***", $parola);
+$parola_censurata = str_replace($parola, "***", $paragrafo);
 ?>
 
 
